@@ -11,7 +11,7 @@ st.write("Select a movie you like, and we'll suggest 5 others!")
 # Load Data
 @st.cache_data
 def get_data_and_model():
-    df = load_data('data/tmdb_5000_credits.csv')
+    df = load_data('data/tmdb_5000_movies.csv')
     sim_matrix = train_model(df)
     return df, sim_matrix
 
