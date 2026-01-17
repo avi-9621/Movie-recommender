@@ -2,9 +2,9 @@ import pandas as pd
 from sklearn.feature_extraction.text import CountVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
 
-def load_data(tmdb_5000_credits.csv):
+def load_data(tmdb_5000_movies.csv):
     # Loads and preprocesses the dataset.
-    df = pd.read_csv(tmdb_5000_credits.csv)
+    df = pd.read_csv(tmdb_5000_movies.csv)
     df['combined_features'] = df['genres'] + " " + df['overview']
     df['combined_features'] = df['combined_features'].fillna('')
     return df
